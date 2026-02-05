@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>דון אלברטו - Don Alberto | תפריט</title>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --bg-color: #fdfaf1;
@@ -16,24 +17,37 @@
         header { text-align: center; padding: 30px 20px; background: var(--white); border-bottom: 3px double var(--accent-color); }
         .logo-img { max-width: 220px; height: auto; display: block; margin: 0 auto 10px; }
         .header-info { font-size: 0.95rem; margin: 5px 0; }
+        
         .nav-menu { position: sticky; top: 0; background: var(--white); padding: 10px 0; overflow-x: auto; display: flex; justify-content: center; border-bottom: 1px solid #eee; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .nav-menu a { padding: 8px 12px; text-decoration: none; color: var(--text-color); font-weight: bold; font-size: 0.9rem; white-space: nowrap; }
+        
         .container { max-width: 850px; margin: auto; padding: 20px; }
         .section-title { text-align: center; border-bottom: 2px solid var(--accent-color); margin: 45px 0 25px; padding-bottom: 8px; color: var(--accent-color); font-size: 1.8rem; letter-spacing: 1px; }
+        
         .menu-grid { display: grid; gap: 15px; }
-        .menu-item { background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: baseline; }
+        .menu-item { background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: baseline; transition: transform 0.2s; }
+        .menu-item:hover { transform: scale(1.01); }
+        
         .item-info { flex: 1; padding-left: 15px; }
         .item-name { font-weight: 700; font-size: 1.15rem; color: #000; display: block; margin-bottom: 4px; }
         .item-desc { font-size: 0.95rem; color: #555; line-height: 1.4; }
         .item-price { font-weight: 700; color: var(--accent-color); font-size: 1.1rem; white-space: nowrap; }
+        
         .toppings-box { background: #f9f6ed; border: 1px dashed var(--accent-color); padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; }
         .toppings-title { font-weight: bold; color: var(--accent-color); margin-bottom: 10px; display: block; font-size: 1.2rem; }
         .toppings-list { font-size: 0.95rem; line-height: 1.8; color: #444; }
-        .custom-pasta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
-        .custom-sub-title { font-weight: bold; border-bottom: 1px solid var(--accent-color); margin-bottom: 10px; padding-bottom: 5px; display: block; }
+        
         footer { text-align: center; padding: 40px 20px; background: #f1ede1; margin-top: 50px; border-top: 2px solid var(--accent-color); }
-        .btn-call { background: var(--accent-color); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 15px 0; }
-        @media (max-width: 600px) { .nav-menu { justify-content: flex-start; } .custom-pasta-grid { grid-template-columns: 1fr; } }
+        .btn-call { background: var(--accent-color); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 15px 0; font-size: 1.1rem; }
+        
+        .social-links { margin-top: 25px; display: flex; justify-content: center; gap: 20px; }
+        .social-links a { color: var(--text-color); font-size: 1.8rem; transition: color 0.3s; }
+        .social-links a:hover { color: var(--accent-color); }
+        .fa-whatsapp { color: #25D366; }
+        .fa-facebook { color: #1877F2; }
+        .fa-instagram { color: #E4405F; }
+
+        @media (max-width: 600px) { .nav-menu { justify-content: flex-start; } }
     </style>
 </head>
 <body>
@@ -66,7 +80,7 @@
                 <span class="item-price">₪ 44</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">קלצונה</span><span class="item-desc">מאפה איטלקי ממולא בגבינות ו 3 תוספות לבחירה.</span></div>
+                <div class="item-info"><span class="item-name">קלצונה</span><span class="item-desc">מאפה איטלקי ממולא בגבינות ו-3 תוספות לבחירה.</span></div>
                 <span class="item-price">₪ 40</span>
             </div>
         </div>
@@ -174,7 +188,7 @@
             <div class="menu-item"><div class="item-info"><span class="item-name">רביולי גבינה\בטטה</span></div><span class="item-price">₪ 58</span></div>
         </div>
         <div class="toppings-box" style="text-align: right;">
-            <span class="custom-sub-title">רטבים</span>
+            <span class="custom-sub-title" style="font-weight: bold; border-bottom: 1px solid var(--accent-color); margin-bottom: 10px; padding-bottom: 5px; display: block;">רטבים</span>
             <div class="toppings-list">שמנת, שמנת פטריות, רוזה, פומודורו (עגבניות), שמנת פסטו</div>
         </div>
     </section>
@@ -218,7 +232,14 @@
 
 <footer>
     <a href="tel:048307777" class="btn-call">חייגו עכשיו: 04-830-7777</a>
-    <div style="margin-top: 10px; font-weight: bold;">דון אלברטו - מטבח איטלקי ישראלי</div>
+    
+    <div class="social-links">
+        <a href="https://wa.me/97248307777" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/albertopizzas/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/donalberto_haifa?igsh=OTJkZWF2ZGZkNzZh" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div style="margin-top: 20px; font-weight: bold;">דון אלברטו - Don Alberto</div>
     <div>שד' טרומפלדור 54, חיפה | כשר</div>
     <div style="margin-top: 20px; font-size: 0.8rem; color: #777;">© 2026 Don Alberto. All rights reserved.</div>
 </footer>
