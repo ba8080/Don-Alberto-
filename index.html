@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דון אלברטו - Don Alberto | תפריט</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdfaf1;
+            --accent-color: #b08d57; /* צבע הזהב/חום מהתפריט */
+            --text-color: #1a1a1a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--white);
+            border-bottom: 3px double var(--accent-color);
+        }
+
+        .logo-img {
+            max-width: 250px; /* גודל מקסימלי ללוגו */
+            height: auto;
+            display: block;
+            margin: 0 auto 15px auto; /* מרכוז הלוגו */
+        }
+
+        .logo-area p {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            padding: 10px 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #eee;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .nav-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: var(--accent-color); }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+            margin: 50px 0 30px;
+            padding-bottom: 10px;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            /* עיטור קטן בסגנון התפריט */
+            display: flex; align-items: center; justify-content: center;
+        }
+        .section-title::before, .section-title::after { content: ' ~ '; margin: 0 10px; }
+
+        .menu-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .menu-item {
+            background: var(--white);
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-info { flex: 1; padding-left: 15px; }
+        .item-name { font-weight: 700; font-size: 1.15rem; display: block; margin-bottom: 5px;}
+        .item-desc { font-size: 0.95rem; color: #555; line-height: 1.4; }
+        .item-price { font-weight: 700; color: var(--accent-color); font-size: 1.1rem; white-space: nowrap; }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f1ede1;
+            margin-top: 60px;
+            border-top: 3px double var(--accent-color);
+        }
+
+        .btn-call {
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(176, 141, 87, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .nav-menu { justify-content: flex-start; padding-left: 10px; }
+            .logo-img { max-width: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+        <img src="logo.png" alt="לוגו דון אלברטו - DON ALBERTO" class="logo-img">
+        
+        <p>מטבח איטלקי ישראלי | כשר</p>
+        <p style="font-weight: normal; font-size: 1rem;">שד' טרומפלדור 54, חיפה</p>
+    </div>
+</header>
+
+<div class="nav-menu">
+    <a href="#starters">ראשונות</a>
+    <a href="#pizzas">פיצות</a>
+    <a href="#pastas">פסטות</a>
+    <a href="#drinks">שתייה</a>
+</div>
+
+<div class="container">
+    
+    <section id="starters">
+        <h2 class="section-title">ראשונות וסלטים</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">ארנצ'יני</span>
+                    <span class="item-desc">3 כדורי ריזוטו קריספי על קרם פרש, סלסה עגבניות ופרמזן.</span>
+                </div>
+                <span class="item-price">44₪</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">סלט חלומי פטריות</span>
+                    <span class="item-desc">בייבי מיקס, רוקט, מלפפון, עגבניות, פטריות מוקפצות וחלומי צרוב.</span>
+                </div>
+                <span class="item-price">66₪</span>
+            </div>
+             <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">פוקאצ'ה הבית</span>
+                    <span class="item-desc">שמן זית, מלח ים, רוזמרין. מוגש עם מטבלים.</span>
+                </div>
+                <span class="item-price">25₪</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="pizzas">
+        <h2 class="section-title">הפיצות שלנו</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">מרגריטה קלאסית</span>
+                    <span class="item-desc">רוטב עגבניות איטלקי, מוצרלה איכותית ובזיליקום טרי.</span>
+                </div>
+                <span class="item-price">35 / 55 / 72₪</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">פולנטה פטריות</span>
+                    <span class="item-desc">קרם תירס עשיר, מוצרלה, פרמזן, פטריות מוקפצות בבלסמי מצומצם.</span>
+                </div>
+                <span class="item-price">44 / 74 / 88₪</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">ביאנקה דבש</span>
+                    <span class="item-desc">קרם מסקרפונה, מוצרלה, שום קונפי, דבש, בצל ירוק ושקדים פרוסים.</span>
+                </div>
+                <span class="item-price">44 / 74 / 88₪</span>
+            </div>
+             <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">כמהין</span>
+                    <span class="item-desc">שמנת כמהין, פטריות פורטובלו ושמפיניון, רוקט ובלסמי מצומצם.</span>
+                </div>
+                <span class="item-price">44 / 74 / 88₪</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="pastas">
+        <h2 class="section-title">פסטות שף</h2>
+        <div class="menu-grid">
+             <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">רביולי בטטה מרווה</span>
+                    <span class="item-desc">כיסוני בטטה בחמאת מרווה, אורגנו טרי, פקאן סיני ודפי פרמזן.</span>
+                </div>
+                <span class="item-price">58₪</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">רביולי קוואטרו פורמאג'י</span>
+                    <span class="item-desc">רביולי גבינות ברוטב שמנת כמהין עשיר, גבינת עיזים ופרמזן.</span>
+                </div>
+                <span class="item-price">58₪</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">פסטה פורצ'יני</span>
+                    <span class="item-desc">רוטב שמנת פטריות עשיר, ערמונים, בצל ירוק ושמן כמהין.</span>
+                </div>
+                <span class="item-price">44₪</span>
+            </div>
+        </div>
+    </section>
+
+     <section id="drinks">
+        <h2 class="section-title">שתייה קלה</h2>
+        <div class="menu-grid">
+            <div class="menu-item" style="padding: 10px 18px; align-items: center;">
+                <div class="item-info"><span class="item-name" style="margin:0;">שתייה קלה (פחיות)</span></div>
+                <span class="item-price">10₪</span>
+            </div>
+            <div class="menu-item" style="padding: 10px 18px; align-items: center;">
+                 <div class="item-info"><span class="item-name" style="margin:0;">בירה שחורה</span></div>
+                 <span class="item-price">12₪</span>
+            </div>
+             <div class="menu-item" style="padding: 10px 18px; align-items: center;">
+                 <div class="item-info"><span class="item-name" style="margin:0;">מים מינרלים</span></div>
+                 <span class="item-price">6₪</span>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <h3 style="margin-bottom: 10px;">להזמנות טלפוניות:</h3>
+    <a href="tel:048307777" class="btn-call">חייגו: 04-830-7777</a>
+    
+    <div style="margin-top: 30px;">
+        <p style="font-weight: bold;">שעות פתיחה:</p>
+        <p>א'-ה': 12:00 - 23:00</p>
+        <p>מוצ"ש: שעה אחרי צאת השבת</p>
+    </div>
+    
+    <p style="margin-top: 40px; font-size: 0.8rem;">© 2024 Don Alberto Haifa. כל הזכויות שמורות.</p>
+</footer>
+
+</body>
+</html>
