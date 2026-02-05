@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דון אלברטו - התפריט המלא</title>
+    <title>דון אלברטו - Don Alberto | תפריט</title>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -12,131 +12,48 @@
             --text-color: #1a1a1a;
             --white: #ffffff;
         }
-
-        body {
-            font-family: 'Assistant', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0; padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            text-align: center;
-            padding: 30px 20px;
-            background: var(--white);
-            border-bottom: 3px double var(--accent-color);
-        }
-
+        body { font-family: 'Assistant', sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 0; }
+        header { text-align: center; padding: 30px 20px; background: var(--white); border-bottom: 3px double var(--accent-color); }
         .logo-img { max-width: 220px; height: auto; display: block; margin: 0 auto 10px; }
-        
-        .nav-menu {
-            position: sticky; top: 0;
-            background: var(--white);
-            padding: 10px 0;
-            overflow-x: auto;
-            display: flex; justify-content: center;
-            border-bottom: 1px solid #eee;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .nav-menu a {
-            padding: 8px 12px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: bold;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
+        .header-info { font-size: 0.95rem; margin: 5px 0; }
+        .nav-menu { position: sticky; top: 0; background: var(--white); padding: 10px 0; overflow-x: auto; display: flex; justify-content: center; border-bottom: 1px solid #eee; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .nav-menu a { padding: 8px 12px; text-decoration: none; color: var(--text-color); font-weight: bold; font-size: 0.9rem; white-space: nowrap; }
         .container { max-width: 850px; margin: auto; padding: 20px; }
-        
-        .section-title {
-            text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-            margin: 45px 0 25px;
-            padding-bottom: 8px;
-            color: var(--accent-color);
-            font-size: 1.6rem;
-        }
-
+        .section-title { text-align: center; border-bottom: 2px solid var(--accent-color); margin: 45px 0 25px; padding-bottom: 8px; color: var(--accent-color); font-size: 1.8rem; letter-spacing: 1px; }
         .menu-grid { display: grid; gap: 15px; }
-
-        .menu-item {
-            background: var(--white);
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #f0f0f0;
-            display: flex; justify-content: space-between; align-items: baseline;
-        }
-
+        .menu-item { background: var(--white); padding: 18px; border-radius: 8px; border: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: baseline; }
         .item-info { flex: 1; padding-left: 15px; }
-        .item-name { font-weight: 700; font-size: 1.1rem; color: #000; }
-        .item-desc { font-size: 0.9rem; color: #555; display: block; margin-top: 3px; }
-        .item-price { font-weight: 700; color: var(--accent-color); white-space: nowrap; }
-
-        /* סגנון מיוחד לבנייה עצמית */
-        .custom-build {
-            background: #f9f6ed;
-            border: 1px dashed var(--accent-color);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        .topping-tag {
-            display: inline-block;
-            background: var(--white);
-            padding: 4px 10px;
-            margin: 3px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            border: 1px solid #ddd;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: #f1ede1;
-            margin-top: 50px;
-            border-top: 2px solid var(--accent-color);
-        }
-
-        .btn-call {
-            background: var(--accent-color);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin: 15px 0;
-        }
-
-        @media (max-width: 600px) {
-            .nav-menu { justify-content: flex-start; }
-            .section-title { font-size: 1.4rem; }
-        }
+        .item-name { font-weight: 700; font-size: 1.15rem; color: #000; display: block; margin-bottom: 4px; }
+        .item-desc { font-size: 0.95rem; color: #555; line-height: 1.4; }
+        .item-price { font-weight: 700; color: var(--accent-color); font-size: 1.1rem; white-space: nowrap; }
+        .toppings-box { background: #f9f6ed; border: 1px dashed var(--accent-color); padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; }
+        .toppings-title { font-weight: bold; color: var(--accent-color); margin-bottom: 10px; display: block; font-size: 1.2rem; }
+        .toppings-list { font-size: 0.95rem; line-height: 1.8; color: #444; }
+        .custom-pasta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
+        .custom-sub-title { font-weight: bold; border-bottom: 1px solid var(--accent-color); margin-bottom: 10px; padding-bottom: 5px; display: block; }
+        footer { text-align: center; padding: 40px 20px; background: #f1ede1; margin-top: 50px; border-top: 2px solid var(--accent-color); }
+        .btn-call { background: var(--accent-color); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 15px 0; }
+        @media (max-width: 600px) { .nav-menu { justify-content: flex-start; } .custom-pasta-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
 <header>
+    <div style="font-size: 0.8rem; color: #888;">ESTD 2015</div>
     <img src="logo.png" alt="Don Alberto Logo" class="logo-img">
-    <p style="margin:0; font-weight:bold; color:var(--accent-color);">מטבח איטלקי ישראלי | כשר</p>
-    <p style="margin:5px 0 0; font-size:0.9rem;">שד' טרומפלדור 54, חיפה | 04-830-7777</p>
+    <div class="header-info" style="font-weight: bold; font-size: 1.2rem;">מטבח איטלקי ישראלי</div>
+    <div class="header-info">04-830-7777 | שד' טרומפלדור 54, חיפה | כשר</div>
 </header>
 
 <div class="nav-menu">
     <a href="#starters">ראשונות</a>
     <a href="#salads">סלטים</a>
     <a href="#pizzas">פיצות</a>
-    <a href="#pastas">פסטות</a>
-    <a href="#custom">בנייה עצמית</a>
+    <a href="#chef-pastas">פסטות השף</a>
+    <a href="#custom-pastas">פסטות בנייה עצמית</a>
     <a href="#pastries">מאפים</a>
     <a href="#desserts">קינוחים</a>
-    <a href="#drinks">שתייה</a>
+    <a href="#drinks">שתייה קרה</a>
 </div>
 
 <div class="container">
@@ -145,12 +62,12 @@
         <h2 class="section-title">ראשונות</h2>
         <div class="menu-grid">
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">ארנצ'יני</span><span class="item-desc">3 כדורי ריזוטו קריספי על קרם פרש, סלסה ופרמזן.</span></div>
-                <span class="item-price">44₪</span>
+                <div class="item-info"><span class="item-name">ארנצ'יני</span><span class="item-desc">3 כדורי ריזוטו קריספי על קרם פרש, סלסה עגבניות ופרמז'ן.</span></div>
+                <span class="item-price">₪ 44</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">קלצונה</span><span class="item-desc">מאפה איטלקי ממולא בגבינות ו-3 תוספות לבחירה.</span></div>
-                <span class="item-price">40₪</span>
+                <div class="item-info"><span class="item-name">קלצונה</span><span class="item-desc">מאפה איטלקי ממולא בגבינות ו 3 תוספות לבחירה.</span></div>
+                <span class="item-price">₪ 40</span>
             </div>
         </div>
     </section>
@@ -159,20 +76,20 @@
         <h2 class="section-title">סלטים</h2>
         <div class="menu-grid">
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">קפרזה</span><span class="item-desc">עגבניות שרי, בזיליקום, מוצרלה פרסקה, שמן זית ובלסמי.</span></div>
-                <span class="item-price">48₪</span>
+                <div class="item-info"><span class="item-name">קפרזה</span><span class="item-desc">עגבניות שיירי בצבעים בזיליקום טרי מורצלה פרסקה שמן זית ובלסמי מצומצם</span></div>
+                <span class="item-price">₪ 48</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">קיסר</span><span class="item-desc">עלי חסה, קרוטונים, פרמזן ובצל סגול ברוטב קיסר.</span></div>
-                <span class="item-price">58₪</span>
+                <div class="item-info"><span class="item-name">קיסר</span><span class="item-desc">עלי חסה קרוטונים פרמזן בצל סגול ברוטב קיסר.</span></div>
+                <span class="item-price">₪ 58</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">שוק</span><span class="item-desc">חסה, עגבניה, מלפפון, תירס, בצל, פלפל, בולגרית וזעתר.</span></div>
-                <span class="item-price">52₪</span>
+                <div class="item-info"><span class="item-name">שוק</span><span class="item-desc">חסה עגבניה מלפפון תירס בצל סגול קלמטה פלפל שושקה בולגרית מפוררת שמן זית וזעתר אסלי.</span></div>
+                <span class="item-price">₪ 52</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">חלומי פטריות</span><span class="item-desc">פטריות מוקפצות, חלומי, בייבי מיקס וירקות טריים.</span></div>
-                <span class="item-price">66₪</span>
+                <div class="item-info"><span class="item-name">חלומי פטריות</span><span class="item-desc">בייבי מיקס, רוקט, מלפפון, עגבניות פטריות מוקפצות חלומי מטוגן ברוטב הבית ושקדים פרוסים.</span></div>
+                <span class="item-price">₪ 66</span>
             </div>
         </div>
     </section>
@@ -181,91 +98,129 @@
         <h2 class="section-title">פיצות</h2>
         <div class="menu-grid">
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">מרגריטה</span><span class="item-desc">רוטב עגבניות, מוצרלה ובזיליקום.</span></div>
-                <span class="item-price">35/55/72₪</span>
+                <div class="item-info"><span class="item-name">מרגריטה</span><span class="item-desc">רוטב עגבניות ומוצרלה בזיליקום טרי.</span></div>
+                <span class="item-price">35/55/72 ₪</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">רוסטיקה</span><span class="item-desc">חמאת עגבניות, מוצרלה, בטטה קלוי, בצל מקורמל וגבינת עיזים.</span></div>
-                <span class="item-price">44/68/82₪</span>
+                <div class="item-info"><span class="item-name">פולנטה</span><span class="item-desc">קרם תירס מוצרלה פרמזן פטריות מוקפצות בבלסמי מצומצם.</span></div>
+                <span class="item-price">44/74/88 ₪</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">פרפצ'יני</span><span class="item-desc">סלסה עגבניות, מוצרלה, חלפיניו, צ'ילי אדום ושום קונפי.</span></div>
-                <span class="item-price">44/66/78₪</span>
+                <div class="item-info"><span class="item-name">רוסטיקה</span><span class="item-desc">חמאת עגבניות מוצרלה פרסקה בטטה קלוי בצל מקורמל עגבניות שמש קלמטה וגבינת עיזים</span></div>
+                <span class="item-price">44/68/82 ₪</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">ורדה</span><span class="item-desc">רוטב פסטו, מוצרלה, בייבי תרד, אורגנו וקרם פרש.</span></div>
-                <span class="item-price">44/74/88₪</span>
+                <div class="item-info"><span class="item-name">פפרצ'יני</span><span class="item-desc">סלסה עגבניות מוצרלה חלפיניו צ'ילי אדום שום קונפי ורוטב סרירצ'ה.</span></div>
+                <span class="item-price">44/66/78 ₪</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">4 גבינות</span><span class="item-desc">רוטב שמנת, מוצרלה, עיזים, בולגרית ופרמזן.</span></div>
-                <span class="item-price">44/74/88₪</span>
+                <div class="item-info"><span class="item-name">וורדה</span><span class="item-desc">רוטב פסטו מוצרלה בייבי תרד אורגנו טרי וקרם פרש.</span></div>
+                <span class="item-price">44/74/88 ₪</span>
             </div>
             <div class="menu-item">
-                <div class="item-info"><span class="item-name">כמהין</span><span class="item-desc">שמנת כמהין, פטריות פורטובלו, רוקט ובלסמי.</span></div>
-                <span class="item-price">44/74/88₪</span>
+                <div class="item-info"><span class="item-name">ביאנקה דבש</span><span class="item-desc">קרם מסקרפונה מוצרלה שום דבש בצל ירוק ושקדים פרוסים וגבינת עיזים.</span></div>
+                <span class="item-price">44/74/88 ₪</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info"><span class="item-name">4 גבינות</span><span class="item-desc">רוטב שמנת מוצרלה עיזים בולגרית פרמז'ן ואורגנו טרי.</span></div>
+                <span class="item-price">44/74/88 ₪</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info"><span class="item-name">כמהין</span><span class="item-desc">שמנת כמהין פטריות פרמז'ן רוקט ובלסמי מצומצם.</span></div>
+                <span class="item-price">44/74/88 ₪</span>
+            </div>
+        </div>
+
+        <div class="toppings-box">
+            <span class="toppings-title">תוספות</span>
+            <div class="toppings-list">
+                זיתים (ירוקים/קלמטה), בצל סגול, תירס עגבניה, ביצת עין, פסטו, בצל ירוק, עגבניות שמש, בזיליקום, פלפל חריף, בלסמי מצומצם פטריות, בטטה, פלפל קלוי, בצל מקורמל, פרמזן, בולגרית, עיזים, קלמטה, טונה, אנשובי, ארטישוק, קונפי שום, עלי רוקט, תוספת גבינה.
             </div>
         </div>
     </section>
 
-    <section id="custom">
-        <h2 class="section-title">פסטה בבנייה עצמית</h2>
-        <div class="custom-build">
-            <p><strong>1. בחר פסטה:</strong> פנה, ספגטי, פטוצ'יני (40₪) | רביולי גבינה/בטטה (58₪)</p>
-            <p><strong>2. בחר רוטב:</strong> שמנת, שמנת פטריות, רוזה, פומודורו (עגבניות), שמנת פסטו.</p>
-            <p><strong>תוספות (לפיצה/פסטה/סלט):</strong></p>
-            <div class="topping-list">
-                <span class="topping-tag">זיתים</span><span class="topping-tag">תירס</span>
-                <span class="topping-tag">ביצת עין</span><span class="topping-tag">פסטו</span>
-                <span class="topping-tag">בצל סגול</span><span class="topping-tag">עגבניות</span>
-                <span class="topping-tag">פטריות</span><span class="topping-tag">בטטה</span>
-                <span class="topping-tag">גבינת עיזים</span><span class="topping-tag">אנשובי</span>
-                <span class="topping-tag">ארטישוק</span><span class="topping-tag">שום קונפי</span>
+    <section id="chef-pastas">
+        <h2 class="section-title">פסטות השף</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info"><span class="item-name">פומודורו</span><span class="item-desc">רוטב עגבניות מסורתי בזיליקום טרי ושום קונפי</span></div>
+                <span class="item-price">₪ 40</span>
             </div>
+            <div class="menu-item">
+                <div class="item-info"><span class="item-name">פורצ'יני</span><span class="item-desc">שמנת, פטריות שמפיניון ערמונים ובצל ירוק</span></div>
+                <span class="item-price">₪ 44</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info"><span class="item-name">בטטה מרווה</span><span class="item-desc">רביולי בטטה בחמאת מרווה אורגנו פקאן סיני ודפי פרמזן</span></div>
+                <span class="item-price">₪ 58</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info"><span class="item-name">רוזה עגבניות</span><span class="item-desc">רוטב רוזה עגבניות שיירי בצבעים ועלי אורגנו טרי</span></div>
+                <span class="item-price">₪ 48</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info"><span class="item-name">קוואטרו פורמג'י</span><span class="item-desc">רביולי גבינות קרם שמנת כמהין גבינת עיזים ופרמזן</span></div>
+                <span class="item-price">₪ 58</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="custom-pastas">
+        <h2 class="section-title">פסטות בנייה עצמית</h2>
+        <div class="menu-grid">
+            <div class="menu-item"><div class="item-info"><span class="item-name">פנה</span></div><span class="item-price">₪ 40</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">ספגטי</span></div><span class="item-price">₪ 40</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">פטוצ'יני</span></div><span class="item-price">₪ 40</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">רביולי גבינה\בטטה</span></div><span class="item-price">₪ 58</span></div>
+        </div>
+        <div class="toppings-box" style="text-align: right;">
+            <span class="custom-sub-title">רטבים</span>
+            <div class="toppings-list">שמנת, שמנת פטריות, רוזה, פומודורו (עגבניות), שמנת פסטו</div>
         </div>
     </section>
 
     <section id="pastries">
         <h2 class="section-title">מאפים</h2>
         <div class="menu-grid">
-            <div class="menu-item">
-                <div class="item-info"><span class="item-name">לחם שום ועשבי תיבול</span></div>
-                <span class="item-price">15₪</span>
-            </div>
-            <div class="menu-item">
-                <div class="item-info"><span class="item-name">זיווה גבינה</span></div>
-                <span class="item-price">35₪</span>
-            </div>
-            <div class="menu-item">
-                <div class="item-info"><span class="item-name">פיצה זעתר ולאבנה</span></div>
-                <span class="item-price">25₪</span>
-            </div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">לחם שום ועשבי תיבול</span></div><span class="item-price">₪ 15</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">זיווה גבינה</span></div><span class="item-price">₪ 35</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">פיצה זעתר ולאבנה</span></div><span class="item-price">₪ 25</span></div>
+        </div>
+    </section>
+
+    <section id="desserts">
+        <h2 class="section-title">קינוחים</h2>
+        <div class="menu-grid">
+            <div class="menu-item"><div class="item-info"><span class="item-name">קלצ'ונה שוקולד ואבקת סוכר</span></div><span class="item-price">₪ 38</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">פיצה נוטלה</span></div><span class="item-price">₪ 38</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">פיצה לוטוס ושערות חלווה</span></div><span class="item-price">₪ 40</span></div>
         </div>
     </section>
 
     <section id="drinks">
-        <h2 class="section-title">קינוחים ושתייה</h2>
+        <h2 class="section-title">שתייה קרה</h2>
         <div class="menu-grid">
-            <div class="menu-item">
-                <div class="item-info"><span class="item-name">קלצונה שוקולד</span></div>
-                <span class="item-price">38₪</span>
-            </div>
-            <div class="menu-item">
-                <div class="item-info"><span class="item-name">פחיות שתייה / זירו</span></div>
-                <span class="item-price">10₪</span>
-            </div>
-            <div class="menu-item">
-                <div class="item-info"><span class="item-name">בירה שחורה</span></div>
-                <span class="item-price">12₪</span>
-            </div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">קולה פחית</span></div><span class="item-price">₪ 10</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">קולה זירו פחית</span></div><span class="item-price">₪ 10</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">פאנטה</span></div><span class="item-price">₪ 10</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">ספרייט</span></div><span class="item-price">₪ 10</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">ענבים</span></div><span class="item-price">₪ 10</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">פיוזטי</span></div><span class="item-price">₪ 10</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">בירה שחורה</span></div><span class="item-price">₪ 12</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">מים</span></div><span class="item-price">₪ 6</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">בלו</span></div><span class="item-price">₪ 6</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">סודה</span></div><span class="item-price">₪ 6</span></div>
+            <div class="menu-item"><div class="item-info"><span class="item-name">סודה בטעמים</span></div><span class="item-price">₪ 8</span></div>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <a href="tel:048307777" class="btn-call">התקשרו להזמנה: 04-830-7777</a>
-    <p>שד' טרומפלדור 54, חיפה | כשר</p>
-    <p>© 2026 Don Alberto</p>
+    <a href="tel:048307777" class="btn-call">חייגו עכשיו: 04-830-7777</a>
+    <div style="margin-top: 10px; font-weight: bold;">דון אלברטו - מטבח איטלקי ישראלי</div>
+    <div>שד' טרומפלדור 54, חיפה | כשר</div>
+    <div style="margin-top: 20px; font-size: 0.8rem; color: #777;">© 2026 Don Alberto. All rights reserved.</div>
 </footer>
 
 </body>
